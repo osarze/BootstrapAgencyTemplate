@@ -1,0 +1,69 @@
+@import "components/_variables";
+@import "components/_mixins";
+
+.background, .alt-background {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+#feature-section {
+    background-color: $secondary-background;
+}
+
+#quote-section {
+    @extend .background;
+    background-color: $secondary-background;
+    color: $primary-text;
+}
+
+#data-section {
+    @extend .background;
+    @include bg-image('../images/bg/grey1.jpg');
+    color: $primary-text;
+    p {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+#contact-section {
+    @extend .background;
+    @include bg-image('../images/bg/contact_section.jpg');
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.page {
+    @extend .background;
+    background-color: $inverse-background;
+}
+.page-banner-section {
+    text-align: center;
+    //background-image: url('../images/bg/grey1.jpg');
+    //background-repeat: no-repeat;
+    //background-attachment: fixed;
+    //background-position: center center;
+    //height: 100px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+@import "components/avatar";
+@import "components/buttons";
+@import "components/forms";
+@import "components/footer";
+@import "components/home_background";
+@import "components/icon_box";
+@import "components/navbar";
+@import "components/portfolio";
+@import "components/progress";
+@import "components/ribbon";
+@import "components/typography";

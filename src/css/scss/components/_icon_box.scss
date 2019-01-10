@@ -1,0 +1,66 @@
+.icon-box {
+    text-align: center;
+    color: $primary-text;
+
+    //
+    //h4 {
+    //    text-transform: uppercase;
+    //    margin: 20px 0;
+    //}
+
+    .icon {
+        background-color: #5EB6DA;
+        border-radius: 50%;
+        color: #ffffff;
+        width: 70px;
+        height: 70px;
+        margin: 10px auto;
+        padding: 1em;
+        transition: all .3s ease 0s;
+        -webkit-transition: all .3s ease 0s;
+        -moz-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
+        -ms-transition: all .3s ease 0s;
+        line-height: 0;
+    }
+
+    @include transition(position 0.5s linear);
+    @include transition(padding 0.5s linear);
+    @include transition(z-index 0.5s linear);
+}
+
+//.icon-left {
+//    @include clearfix();
+//    .icon {
+//        width: 25%;
+//        display: block;
+//        float: left;
+//        // margin-right: 2%;
+//    }
+//    .icon-text {
+//        width: 70%;
+//        text-align: left;
+//        float: left;
+//    }
+//    h1, h2, h3, h4, h5, h6 {
+//        margin-top: 0;
+//    }
+//}
+.icon-left {
+    //@include clearfix();
+    //padding-top: 20px;
+    //padding-bottom: 20px;
+    //.icon {
+    //    background-color: transparent;
+    //    border-radius: 0;
+    //    width: 25%;
+    //    display: block;
+    //    float: left;
+    //    // margin-right: 2%;
+    //}
+    //.icon-text {
+    //    width: 70%;
+    //    text-align: left;
+    //    float: left;
+    //}
+}

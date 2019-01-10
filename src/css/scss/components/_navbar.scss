@@ -1,0 +1,119 @@
+.navbar-light {
+	background-color: 	transparent;
+	border-bottom: 		1px solid $primary-background;
+	color: 				$inverse-text;
+	margin-bottom: 		0;
+
+	.navbar-brand{
+		padding: 0;
+		> img {
+			width: 			120px;
+			height: 		50px;
+		}
+	}
+
+	.navbar-nav {
+		.active > .nav-link,
+		.nav-link.active{
+			color: 				$nav-link-color;
+			border-bottom: 		2px solid $mighty-primary;
+			font-weight: 600;
+		}
+
+		.nav-link {
+			color: 				$nav-link-color;
+			padding: 			25px 10px;
+			&:hover,
+			&:focus {
+				opacity: 0.9;
+				color: 			$nav-link-hover-color;
+			}
+			//&:after {
+			//	position: absolute;
+			//	top: 97%;
+			//	left: 0;
+			//	width: 100%;
+			//	height: 2px;
+			//	background: red;//#fff;
+			//	content: '';
+			//	//opacity: 0;
+			//	//-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+			//	//-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+			//	//transition: height 0.3s, opacity 0.3s, transform 0.3s;
+			//	//-webkit-transform: translateY(-10px);
+			//	//-moz-transform: translateY(-10px);
+			//	//transform: translateY(-10px);
+			//}
+		}
+	}
+}
+
+
+
+
+// Display of border at the bottom of each nav item
+.navbar-default .navbar-nav > li > .active::after,
+.navbar-default .navbar-nav > li > a:hover::after,
+.navbar-default .navbar-nav > li > a:focus::after {
+	height: 2px;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+
+
+//the icon on mobile view
+.navbar-light .navbar-toggler
+{
+	border: 	0;
+	color: 		$white;
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: 	transparent;
+	}
+	.navbar-toggler-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	}
+}
+
+
+//@media screen and (max-width: 766px)
+@include media-breakpoint-down(sm) {
+	.top-nav-collapse {
+		padding: 0;
+		background-color: $inverse-background;
+	}
+
+	.navbar-default .navbar-nav > li > a {
+		padding: 10px 5px;
+	}
+}
+
+
+@media(min-width:767px) {
+	/*
+    .navbar {
+        padding: 20px 0;
+        border-bottom: none;
+        letter-spacing: 1px;
+        background: yellow;//transparent;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+	*/
+
+	.navbar-default.top-nav-collapse {
+		border-bottom: 1px solid fade(#fff, 30%);
+	}
+
+	.top-nav-collapse {
+		padding: 0;
+		background-color: darken($secondary-background, 20%);
+
+	}
+}
+

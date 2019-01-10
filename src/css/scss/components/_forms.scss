@@ -1,0 +1,27 @@
+.form-control[type="text"],
+textarea.form-control {
+    background-color: transparent;
+    border-radius: 0;
+    color: $primary-text;
+    &:focus,
+    &:active {
+        background-color: transparent;
+        color: $primary-text;
+    }
+    &::placeholder,
+    &:-ms-input-placeholder,
+    &::-ms-input-placeholder {
+        color: #ffffff;//$primary-text;
+    }
+    &::placeholder{
+        opacity: 1;
+    }
+}
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+.form-control[type="text"] {
+    height: 40px;
+}

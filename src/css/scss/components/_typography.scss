@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 	"Roboto";
+    text-transform:	uppercase;
+    color: 			$heading-text;
+}
+
+.alt-title {
+    color: #2B2B2B;
+}
+
+// title
+.title  {
+    text-align: center;
+    padding: 20px;
+    //span {
+    //    color:  $inverse-background;
+    //}
+    //.style-title:after {
+    //    content: '';
+    //    width: 50px;
+    //    display: block;
+    //    border-radius: 1px;
+    //    height: 3px;
+    //    background-color: $inverse-background;
+    //    margin: 5px auto 20px;
+    //}
+}

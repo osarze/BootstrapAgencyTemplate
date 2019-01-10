@@ -1,0 +1,31 @@
+// Mixins
+// Background Cover Mixin
+@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin bg-parallax {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  @include background-cover;
+}
+
+@mixin bg-image($imagePath){
+  background-image: url($imagePath);
+}
+
+@mixin bg-image-opacity($imagePath){
+  @extend .parallax-bg;
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

@@ -1,0 +1,135 @@
+@import "_colors";
+
+//Background Color
+$primary-background: 		$white;
+$secondary-background: 		$mighty-primary;
+$inverse-background: 		$mighty-secondary;
+//$third-background:			$ef-dark-primary;
+
+
+
+//Text Color
+$primary-text: 				$mighty-primary-text;
+$inverse-text: 				$mighty-secondary-text;
+$heading-text: 				$mighty-primary-text;
+$secondary-text: 			$mighty-primary;
+
+//Link Color
+$primary-link-color: 		$mighty-primary;
+$primary-link-color-hover: 	$mighty-primary;
+
+//Nav Link Color
+$nav-link-color:          $primary-text;
+$nav-link-hover-color:    $primary-text;
+
+
+//Borders
+$border-color: 				$secondary-background;
+$border-size: 				1px;
+$border-type: 				solid;
+$border-type2: 				outset;
+$border-focus: 				$mighty-primary-text;
+$border-secondary-color: 	$mighty-primary-text;
+
+//Typography
+$body-copy: 				"Raleway", "Helvetica Neue", helvetica, arial, verdana, sans-serif;
+$heading-copy: 				"Raleway", "Helvetica Neue", helvetica, arial, verdana, sansserif;
+$base-font-size: 			14px;
+$font-size: 				1em;
+$base-line-height: 			1.8;
+$letter-spacing:			1px;
+$font-weight:				100;
+
+//Layout
+$margin: 					1em;
+$padding: 					1em;
+
+$padding2: 					5px;
+$margin2: 					5px;
+
+//Primary Background
+
+//reset list
+.ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// anchor reset
+.anchor {
+  display: inline-block;
+  text-decoration: none;
+  // .transition;
+}
+
+
+.background, .alt-background {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.alt-background {
+  background-color: $grey;
+}
+
+//work around for background image opacity
+//parallax background
+.bkg-px {
+  @extend .background;
+  position: relative;
+  // background: #5C97FF;
+  overflow: hidden;
+}
+
+//common parrallax background properties
+.parallax-bg{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+//parralax background on the main container,, i.e. without opacity on image background
+@mixin bck-img($imagePath) {
+  @extend .parallax-bg;
+  background-image: url($imagePath);
+}
+
+@mixin bck-img-opacity($imagePath2){
+  @extend .parallax-bg;
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  // opacity: 0.6;
+  background-image: url($imagePath2);
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-position: 50% 0;
+  // -ms-background-size: cover;
+  // -o-background-size: cover;
+  // -moz-background-size: cover;
+  // -webkit-background-size: cover;
+  // background-size: cover;
+}
+
+// clear float
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
